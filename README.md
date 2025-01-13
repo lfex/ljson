@@ -1,78 +1,21 @@
 # ljson
-
-DEPRECATED - use the [jsx](https://github.com/talentdeficit/jsx) Erlang library instead!
-
 [![Build Status][travis badge]][travis]
 [![LFE Versions][lfe badge]][lfe]
 [![Erlang Versions][erlang badge]][versions]
 [![Tags][github tags badge]][github tags]
 [![Downloads][hex downloads]][hex package]
 
-*An LFE library which provides a unified JSON experience*
+*A wrapper for `json` in the Erlang stdlib for 27+ and for `jsx` in Erlang 26 and below*
 
 [![Project Logo][logo]][logo-large]
 
+## About
 
-#### Contents
+Until all supported Erlang versions have `json` and support a backwards-compatible feature set, this library will be around.
 
-* [Introduction](#introduction-)
-* [Dependencies](#dependencies-)
-* [Installation](#installation-)
-* [Usage](#usage-)
-* [Future](#future-)
-* [License](#license-)
+## Usage
 
-
-## Introduction [&#x219F;](#contents)
-
-This library was educated by
-[Chiron](http://en.wikipedia.org/wiki/Chiron#Students)
-to avenge the crimes against JSON and its heirs in the Erlang world. It is
-destined to search for the
-[Golden Macro](http://en.wikipedia.org/wiki/Golden_Fleece), as
-revealed by the
-[Cloud Goddess](http://en.wikipedia.org/wiki/Nephele).
-
-
-## Dependencies [&#x219F;](#contents)
-
-As of version 0.4.0, this project assumes that you have
-[rebar3](https://github.com/rebar/rebar3) installed somwhere in your `$PATH`.
-It no longer uses the old version of rebar. If you do not wish to use rebar3,
-you may use the most recent rebar2-compatible release of ljson: 0.3.1.
-
-
-## Installation [&#x219F;](#contents)
-
-Just add it to your `rebar.config` deps:
-
-```erlang
-{deps, [
-  ...
-  {ljson, {git, "git@github.com:lfex/ljson.git", "master"}}
-    ]}.
-```
-
-And then do the usual:
-
-```bash
-$ make compile
-```
-
-
-## Usage [&#x219F;](#contents)
-
-The following usage examples are all done from the LFE REPL:
-
-```
-$ make repl-no-deps
-Starting an LFE REPL ...
-Erlang/OTP 17 [erts-6.2] [source] [64-bit] [smp:4:4] [async-threads:10] ...
-
-LFE Shell V6.2 (abort with ^G)
->
-```
-
+The following usage examples are from LFE, but the same applies to Erlang (though hyphens in the LFE function name can be replaced with underscores in the same Erlang function).
 
 Encode simple LFE data to JSON:
 
@@ -100,7 +43,6 @@ ok
 ok
 >
 ```
-
 
 Decode simple JSON:
 
@@ -302,18 +244,7 @@ Extract elements directly from JSON:
 #"\"home\""
 ```
 
-
-## Under the Deck [&#x219F;](#contents)
-
-The Argonauts that are rowing this thing consist of the following:
-
-* mochijson2 - for encoding of nested data
-* jsx - for decoding, `prettify` and `minify`
-* dict - (wrapped as `pairs`) for large key/value lists
-* proplists/lists of tuples - for small key/value lists
-
-
-## License [&#x219F;](#contents)
+## License 
 
 Apache Version 2 License
 
@@ -321,7 +252,7 @@ Copyright © 2014-2015, Dreki Þórgísl
 
 Copyright © 2015, arpunk
 
-Copyright © 2015-2019, Duncan McGreggor <oubiwann@gmail.com>
+Copyright © 2015-2025, Duncan McGreggor <oubiwann@gmail.com>
 
 
 <!-- Named page links below: /-->
