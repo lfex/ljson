@@ -2,7 +2,7 @@
 {application, ljson,
  [
   %% A quick description of the application.
-  {description, "An LFE library which provides a unified JSON experience"},
+  {description, "A wrapper for json in the Erlang stdlib for 27+ and for jsx in Erlang 26 and below"},
 
   %% The version of the application
   {vsn, "0.7.0"},
@@ -10,10 +10,7 @@
   %% All modules used by the application.
   {modules,
    [
-    ljson,
-    'ljson-util',
-    'ljson-tests',
-    'ljson-util-tests'
+    ljson
    ]},
 
   %% All of the registered names the application uses. This can be ignored.
@@ -39,11 +36,13 @@
 
   %% Package metadata:
   {pkg_name, ljson},
-  {maintainers, ["Duncan McGreggor"]},
-  {licenses, ["Apache-2"]},
+  {licenses, ["Apache-2.0"]},
   {links,
    [{"GitHub", "https://github.com/lfex/ljson"},
     {"Gitlab", "https://gitlab.com/lfex/ljson"},
     {"Hex", "https://hex.pm/packages/ljson"}
-   ]}
+   ]},
+  {exclude_paths, [
+    "priv/images"
+  ]}
  ]}.
