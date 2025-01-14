@@ -11,7 +11,11 @@
 
 ## About
 
-Until all supported Erlang versions have `json` and support a backwards-compatible feature set, this library will be around.
+ljson provides a very thin wrapper around the `encode/1`, `encode/2` functions of the jsx library when running in OTP versions 26 and below; it provides a similar wrapper for `encode/1`, `encode/3` when running in OTP 27 and above.
+
+In both cases, binary is returned. Since Erlang 27's `json` returns an iolist, this does add a step for Erlang 27+ and breaks a bit of that compatibility in the interest of preserving more backwards compatibility for projects that have used jsx.
+
+How long will this library be around? Until there's a better library easily usable from LFE projects, or until all supported Erlang versions have `json` and provide a backwards-compatible feature set, this library will be around.
 
 ## Usage
 
