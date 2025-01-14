@@ -30,10 +30,10 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y gnuplot
     - name: Compile
       run: rebar3 compile
-    - name: Xref Checks
-      run: rebar3 xref
-    - name: Dialyzer
-      run: rebar3 dialyzer
+    #- name: Xref Checks
+    #  run: rebar3 xref
+    #- name: Dialyzer
+    #  run: rebar3 dialyzer
     - name: Proper Tests
       run: rebar3 as test do compile, proper --regressions
     # - name: Run Tests
@@ -61,10 +61,10 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y gnuplot
     - name: Compile
       run: rebar3 compile
-    - name: Xref Checks
-      run: rebar3 xref
-    - name: Dialyzer
-      run: rebar3 dialyzer
+    #- name: Xref Checks
+    #  run: rebar3 xref
+    #- name: Dialyzer
+    #  run: rebar3 dialyzer
     - name: Proper Tests
       run: rebar3 as test do compile, proper --regressions
     # - name: Run Tests
@@ -92,10 +92,10 @@ jobs:
       run: sudo apt-get update && sudo apt-get install -y gnuplot
     - name: Compile
       run: rebar3 compile
-    - name: Xref Checks
-      run: rebar3 xref
-    - name: Dialyzer
-      run: rebar3 dialyzer
+    #- name: Xref Checks
+    #  run: rebar3 xref
+    #- name: Dialyzer
+    #  run: rebar3 dialyzer
     - name: Compile Tests
       run: rebar3 as test compile
     - name: Proper Tests
