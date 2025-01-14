@@ -1,13 +1,15 @@
+[![Build Status][gh-actions-badge]][gh-actions]
+[![LFE Versions][lfe-badge]][lfe]
+[![Erlang Versions][erlang-badge]][versions]
+[![Tags][github-tags-badge]][github-tags]
+[![Downloads][hex-downloads]][hex-package]
+
+[![Project Logo][logo]][logo-large]
+
 # ljson
-[![Build Status][travis badge]][travis]
-[![LFE Versions][lfe badge]][lfe]
-[![Erlang Versions][erlang badge]][versions]
-[![Tags][github tags badge]][github tags]
-[![Downloads][hex downloads]][hex package]
 
 *A wrapper for `json` in the Erlang stdlib for 27+ and for `jsx` in Erlang 26 and below*
 
-[![Project Logo][logo]][logo-large]
 
 ## About
 
@@ -266,15 +268,14 @@ Copyright © 2015-2025, Duncan McGreggor <oubiwann@gmail.com>
 [org]: https://github.com/lfex
 [github]: https://github.com/lfex/ljson
 [gitlab]: https://gitlab.com/lfex/ljson
-[travis]: https://travis-ci.org/lfex/ljson
-[travis badge]: https://img.shields.io/travis/lfex/ljson.svg
+[gh-actions-badge]: https://github.com/lfex/ljson/workflows/ci%2Fcd/badge.svg
+[gh-actions]: https://github.com/lfex/ljson/actions
 [lfe]: https://github.com/rvirding/lfe
-[lfe badge]: https://img.shields.io/badge/lfe-1.3.0-blue.svg
-[erlang badge]: https://img.shields.io/badge/erlang-17.5%20to%2022.0-blue.svg
+[lfe-badge]: https://img.shields.io/badge/lfe-1.3.0-blue.svg
+[erlang-badge]: https://img.shields.io/badge/erlang-17.5%20to%2022.0-blue.svg
 [versions]: https://github.com/lfex/ljson/blob/master/.travis.yml
-[github tags]: https://github.com/lfex/ljson/tags
-[github tags badge]: https://img.shields.io/github/tag/lfex/ljson.svg
-[github downloads]: https://img.shields.io/github/downloads/lfex/ljson/total.svg
-[hex badge]: https://img.shields.io/hexpm/v/ljson.svg?maxAge=2592000
-[hex package]: https://hex.pm/packages/ljson
-[hex downloads]: https://img.shields.io/hexpm/dt/ljson.svg
+[github-tags]: https://github.com/lfex/ljson/tags
+[github-tags-badge]: https://img.shields.io/github/tag/lfex/ljson.svg
+[hex-badge]: https://img.shields.io/hexpm/v/ljson.svg?maxAge=2592000
+[hex-package]: https://hex.pm/packages/ljson
+[hex-downloads]: https://img.shields.io/hexpm/dt/ljson.svg
