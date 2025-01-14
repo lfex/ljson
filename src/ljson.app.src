@@ -43,6 +43,6 @@
     {"Hex", "https://hex.pm/packages/ljson"}
    ]},
   {exclude_paths, [
-    "priv/images"
+    "priv"
   ]}
  ]}.

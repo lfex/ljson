@@ -145,8 +145,7 @@ Copyright © 2015, arpunk
 
 Copyright © 2015-2025, Duncan McGreggor <oubiwann@gmail.com>
 
-
-<!-- Named page links below: /-->
+[//]: ---Named-Links---
 
 [logo]: priv/images/jason-argonauts-small.png
 [logo-large]: http://dropr.com/coenhamelink/15218/jason_and_the_argonauts/+?p=97582
