@@ -5,7 +5,7 @@
   {description, "A wrapper for json in the Erlang stdlib for 27+ and for jsx in Erlang 26 and below"},
 
   %% The version of the application
-  {vsn, "0.7.0"},
+  {vsn, "0.8.0-dev"},
 
   %% All modules used by the application.
   {modules,
