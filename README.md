@@ -1,15 +1,14 @@
+# ljson
+
 [![Build Status][gh-actions-badge]][gh-actions]
 [![LFE Versions][lfe-badge]][lfe]
 [![Erlang Versions][erlang-badge]][versions]
 [![Tags][github-tags-badge]][github-tags]
 [![Downloads][hex-downloads]][hex-package]
 
-[![Project Logo][logo]][logo-large]
-
-# ljson
-
 *A wrapper for `json` in the Erlang stdlib for 27+ and for `jsx` in Erlang 26 and below*
 
+[![Project Logo][logo]][logo-large]
 
 ## About
 
@@ -19,7 +18,7 @@ In both cases, binary is returned. Since Erlang 27's `json` returns an iolist, t
 
 How long will this library be around? Until there's a better library easily usable from LFE projects, or until all supported Erlang versions have `json` and provide a backwards-compatible feature set, this library will be around.
 
-## Usage
+## Core Usage
 
 The following usage examples are from LFE, but the same applies to Erlang (though hyphens in the LFE function name can be replaced with underscores in the same Erlang function).
 
@@ -133,6 +132,42 @@ lfe> (set lfe-data
 (#(#B(...)))
 lfe> (ljson:encode lfe-data)
 #"{\"Address\":{\"City\":\"Tórshavn\",\"Country\":\"Faroe Islands\",\"Postal Code\":\"100\",\"Street Address\":\"í Gongini 5 Postsmoga 108\"},\"Age\":25,\"Children\":[],\"First Name\":\"Jón\",\"Height_cm\":167.6,\"Is Alive?\":true,\"Last Name\":\"Þórson\",\"Phone Numbers\":[{\"Number\":\"20 60 30\",\"Type\":\"home\"},{\"Number\":\"+298 20 60 20\",\"Type\":\"office\"}],\"Spouse\":null}"
+```
+
+Note that the additional function arguments (`encode/2`, `decode/2`, and `decode/3`) are specific to the underlying JSON library being used. The args will have the same meaning as the parent library used, with no attempt made by ljson to unify these for consistency.
+
+## Working with Files
+
+Write Erlang terms as serialised JSON data to a file:
+
+``` cl
+lfe> (ljson-file:write "/tmp/test-data.json" #m(a 1 b 2 c 3))
+"/tmp/test-data.json"
+```
+
+Read a JSON file, deserialising the data as Erlang terms:
+
+``` cl
+lfe> (ljson-file:read "/tmp/test-data.json")
+#M(#"a" 1 #"b" 2 #"c" 3)
+```
+
+### Helpers for Standard System Directories
+
+The Erlang/LFE project [dirs](https://github.com/lfex/dirs) (a port of the same Rust library)) defines standard/convential directories by in Linux, macos, and Windows operating systems. The ljson project utilises this library to support convenient reading and writing of application data files, etc.
+
+Write a JSON file:
+
+``` cl
+lfe> (ljson-file:write 'data "myapp/conponent/state.json" #m(a 1 b 2 c 3))
+"/Users/oubiwann/Library/Application Support/myapp/conponent/state.json"
+```
+
+Read a JSON file:
+
+``` cl
+lfe> (ljson-file:read 'data "myapp/conponent/state.json")
+#M(#"a" 1 #"b" 2 #"c" 3)
 ```
 
 ## License 
