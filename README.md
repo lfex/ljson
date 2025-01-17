@@ -191,7 +191,7 @@ Copyright © 2015-2025, Duncan McGreggor <oubiwann@gmail.com>
 [gh-actions]: https://github.com/lfex/ljson/actions
 [lfe]: https://github.com/rvirding/lfe
 [lfe-badge]: https://img.shields.io/badge/lfe-2.1+-blue.svg
-[erlang-badge]: https://img.shields.io/badge/erlang-21%20to%2027-blue.svg
+[erlang-badge]: https://img.shields.io/badge/erlang-21+-blue.svg
 [versions]: https://github.com/lfex/ljson/blob/master/.travis.yml
 [github-tags]: https://github.com/lfex/ljson/tags
 [github-tags-badge]: https://img.shields.io/github/tag/lfex/ljson.svg
